@@ -11,18 +11,20 @@
 <div id="header">
     <div class="container">
         <nav>
-            <img src="images/logo.png" alt="logo" class="logo">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+            <img src="images/logo.jpg" alt="logo" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
-            <h1>Web Developer</h1>
-            <h1>HI, I'm <span>shailendra Rawal</span> <br>Form Nepal</h1>
+            <h1 class="typewriter" data-text="Web Developer"></h1>
+            <h1>HI, I'm <span>Shailendra Rawal</span> <br>Form Nepal</h1>
         </div>
     </div>
 </div>
@@ -43,25 +45,25 @@
                 </p> 
                 <div class="tab-title">
                     <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+
                     <p class="tab-links" onclick="opentab('education')">Education</p>
                 </div> 
                 <div class="tab-contents active-tab" id="skills">
                     <ul>
                         <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
                         <li><span>Web Development</span><br>Web app Development</li>
+                        <li><span>Machine Learning</span><br>Developing Predictive Models</li>
+                        <li><span>Database Management</span><br>SQL & NoSQL Database Design</li>
+                        <li><span>Cloud Services</span><br>Deploying Scalable Cloud Solutions</li>
                     </ul>
                 </div>
-                <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>None</span><br>as of now no experience</li>
-                        </ul>
-                </div>
+
                 <div class="tab-contents" id="education">
                     <ul>
                         <li><span>2077-2081</span><br>Bachelor in Engineering<br>Thapathali Campus</li>
                     </ul>
                 </div>
+            </div>
         </div>
     </div>
 </div>
@@ -75,19 +77,28 @@
                 <i class="fa-solid fa-code"></i>
                 <h2>Web Design</h2>
                 <p>Designing web interfaces that are user-friendly and visually appealing.</p>
-                <a href="#">Learn More</a>
+                <div class="hidden-content">
+                    <p>Our web development services include front-end and back-end solutions. We focus on performance, SEO, and user-friendly design to meet your business goals. Our tech stack includes HTML, CSS, JavaScript, React, and more.</p>
+                </div>
+                <button class="learn-more-btn">Learn More</button>
             </div>
             <div>
                 <i class="fa-solid fa-crop"></i>
                 <h2>UI/UX Design</h2>
                 <p>Designing web interfaces that are user-friendly and visually appealing.</p>
-                <a href="#">Learn More</a>
+                <div class="hidden-content">
+                    <p>We offer custom mobile app solutions for Android and iOS platforms. Our team ensures your app is fast, secure, and scalable, providing an outstanding user experience.</p>
+                </div>
+                <button class="learn-more-btn">Learn More</button>
             </div>
             <div>
                 <i class="fa-brands fa-app-store"></i>
                 <h2>App Design</h2>
                 <p>Designing web interfaces that are user-friendly and visually appealing.</p>
-                <a href="#">Learn More</a>
+                <div class="hidden-content">
+                    <p>Our design process focuses on user needs and behavior. We create wireframes, prototypes, and visually stunning interfaces that help improve customer satisfaction and usability.</p>
+                </div>
+                <button class="learn-more-btn">Learn More</button>
             </div>
         </div>
     </div>
@@ -96,13 +107,13 @@
 <div id="portfolio">
     <div class="container">
         <h1 class="subtitle" >My Work </h1>
-        <div class="work-list">
+        <div class="work-list collapsed">
             <div class="work">
                 <img src="images/supermario.jpg">
                 <div class="layer">
                     <h2>Automated Super Mario</h2>
                     <p>Super Mario was trained using RL to overcome the obstacles.</p>
-                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    <a href="https://github.com/mmatyas/supermariowar"><i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
             <div class="work">
@@ -110,11 +121,27 @@
                 <div class="layer">
                     <h2>Chest-Xray Report Generator</h2>
                     <p>It automatically generates the Chest Xray report in downloadable pdf format.</p>
-                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    <a href="https://github.com/edaaydinea/Pneumonia-Detection-on-Chest-Xray-Images-with-Deep-Leaning"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/plant_monitoring.jpg" alt="Plant Monitoring">
+                <div class="layer">
+                    <h2>Smart Plant Monitoring</h2>
+                    <p>An IoT-based system to monitor plant health and growth remotely.</p>
+                    <a href="https://github.com/Plant-for-the-Planet-org/planet-webapp"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/chatbot.png" alt="Chatbot">
+                <div class="layer">
+                    <h2>AI Chatbot</h2>
+                    <p>Developed an AI chatbot for customer service using natural language processing.</p>
+                    <a href="https://github.com/botman/botman"><i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
         </div>
-        <a href="#" class="btn">View More</a>
+        <button id="view-more-btn" class="btn">View More</button>
     </div>
 </div>
 
@@ -127,27 +154,33 @@
                 <p><i class="fa-solid fa-paper-plane"></i> rawalshailendra48@gmail.com</p>
                 <p><i class="fa-solid fa-phone"></i> +977-9741663908</p>
                 <div class="social-icons">
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100018429409289"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/wagghack/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/shailendra-rawal-38ba792a9/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/"><i class="fa-brands fa-square-github"></i></a>
                 </div>
                 <a href="#" download class="btn btn2">Download CV</a>
             </div>
             <div class="contact-right">
-                <form>
+                <form name="submit-to-google-sheet">
                     <input type="text" name="Name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Message"></textarea>
                     <button type="submit" class="btn btn2 ext">Submit</button>
                 </form>
+                <span id="msg"></span>
             </div>
+            
         </div>
     </div>
- </div>
+</div>
+<!------------------------------------------------Footer----------------------------------------------->
+<footer>
+    <p><i class="fa-regular fa-copyright"></i> Shailendra Rawal 2025. All Rights Reserved.</p>
+</footer>
 
 
-
-
+<!-- -------------------------<script> ----------------------------------------------------------------->
 <script>
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
@@ -162,6 +195,88 @@
                 document.getElementById(tabName).classList.add("active-tab");
         }
 </script>
+<script>
+    var sidemenu= document.getElementById("sidemenu");
+    
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+
+</script>
+  
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwkyiZZmk0h3GkO-CnY6YvF_soN-eXZfO4ZCb_jMx3ziO22ZqTpUQ71yvCEuL-E-R89/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById('msg')
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response =>{
+            msg.innerHTML="Message Sent Successfully";
+            setTimeout(() => {
+                msg.innerHTML="";
+            }, 4000);
+            form.reset();
+        } )
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
+
+<script>
+    const workList = document.querySelector('.work-list');
+    const viewMoreBtn = document.getElementById('view-more-btn');
+
+    viewMoreBtn.addEventListener('click', () => {
+        if (workList.classList.contains('collapsed')) {
+            workList.classList.remove('collapsed');
+            workList.classList.add('expanded');
+            viewMoreBtn.textContent = 'Show Less';
+        } else {
+            workList.classList.remove('expanded');
+            workList.classList.add('collapsed');
+            viewMoreBtn.textContent = 'View More';
+        }
+    });
+
+</script>
+
+<script>
+    document.querySelectorAll('.learn-more-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            // Find the closest parent service item container
+            const serviceItem = button.closest('.services-list > div');
+            // Find the hidden content within this service item
+            const content = serviceItem.querySelector('.hidden-content');
+            // Toggle display state
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+            // Update button text
+            button.textContent = content.style.display === 'block' ? 'Show Less' : 'Learn More';
+        });
+    });
+</script>>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const typewriter = document.querySelector('.typewriter');
+    const text = typewriter.getAttribute('data-text');
+        
+    let i = 0;
+    function typeEffect() {
+            if (i < text.length) {
+            typewriter.textContent += text.charAt(i);
+            i++;
+            setTimeout(typeEffect, 140); // Adjust speed by changing 150 ms
+            }
+    }
+    typeEffect();
+    });
+</script>
+  
+
 
 </body>
 </html>
